@@ -1,16 +1,35 @@
 <script>
     //Problema: Remover SUV
     //Crie os seguintes arrays:
-    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    // let carrosSUV = ["Tiggálio", "Sportage", "Tucson", "EcoSport"];
     //Pergunte ao usuário qual carro deseja REMOVER da lista.
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
-    //ENTRADA
-
-
+    //ENTRADA  
+    const p = prompt(`Quais desses carros você deseja remover? (Tiggo, Sportage, Tucson e EcoSport.")`.trim())
+    let suv = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let remv = []
     //PROCESSAMENTO
+    if (p == "Tiggo") {
+        remv = suv.shift("Tiggo");
+        alert(`Este é o carro que foi removido : ${remv}, esta é a lista atual ${suv}.`)
+    }
+    else if (p == "Sportage") {
+        remv = suv.splice(1, 1)
+        alert(`Este é o carro que foi removido : ${remv}, esta é a lista atual ${suv}.`)
+    }
+    else if (p == "Tucson") {
+        remv = suv.splice(2,1)
+        alert(`Este é o carro que foi removido : ${remv}, esta é a lista atual ${suv}.`)
 
-
+    }
+    else if (p == "Ecosport") {
+        remv = suv.splice(3,1) 
+        alert(`Este é o carro que foi removido : ${remv}, esta é a lista atual ${suv}.`)
+    }
+    else {
+        alert(`Nome inválido.`)
+    }
     //SAÍDA
 
 </script>
