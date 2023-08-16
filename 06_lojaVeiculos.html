@@ -14,27 +14,27 @@
     let sed = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let hat = ["308", "Focus", "i30"];
     for (let i = 0; i < 3; i++) {
-        const nv = prompt(`Insira um novo veículo.`.trim());
-        let tip = prompt(`Insira o modelo do veículo (Suv, Sedan, Hatch)`.trim());
+        const nv = prompt(`Insira um novo veículo.`).trim();
+        let tip = prompt(`Insira o modelo do veículo (Suv, Sedan, Hatch)`).trim().toLowerCase();
 
 
 
         //PROCESSAMENTO
-        if (tip == "Suv") {
+        if (tip == "suv") {
             suv.push(nv)
         }
-        else if (tip == "Sedan") {
+        else if (tip == "sedan") {
             sed.push(nv)
         }
-        else if (tip == "Hatch") {
+        else if (tip == "hatch") {
             hat.push(nv)
         }
-
+    }
 
         alert(`Esta é a lista de SUVs: ${suv}`)
         alert(`Esta é a lista de Sedans: ${sed}`)
         alert(`Esta é a lista de Hatches: ${hat}`)
-    }
+
     //SAÍDA
 
 </script>
